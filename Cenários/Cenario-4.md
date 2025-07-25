@@ -116,7 +116,7 @@
         Resultado esperado: O Sistema notificar ao usuário que a UF é inválida.
 
 ## Automatização: 
-    Considerando o teste de cadastro e/ou edição, acho valido automatizar esse processo com **Cypress** ou **Selenium**,
+    Considerando o teste de cadastro e/ou edição, acho valido automatizar esse processo com Cypress ou Selenium,
     caso futuramente os campos voltem a sofrer alterações seria mais simples rodar um teste de regressão para garantir que as regras de negócio ainda funcionem.
 
 ## Testes de Inteface/Usabilidade
