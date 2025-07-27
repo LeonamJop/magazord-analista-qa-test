@@ -2,10 +2,34 @@
 
 ## Revisão da documentação e Comprenssão do fluxo:
 
-- Junto com o time de desenvolvimento, avaliar os pontos importantes da documentação que está relacionado a pausa de anúcios.
+- Reunir com o time de desenvolvimento para revisar a documentação da integração, focando no processo de pausa de anúncios.
 
-- Compreenssão do processo de atualização de estoque para o MercadoLivre.
-    Segundo a documentação do Mercado Livre, para o anúncio pode ser pausado de duas formar via API sendo elas um PUT com o campo "available_quantity": 0 e outra seria um PUT com o campo "status":"paused".
+- Compreender o processo atual de atualização de estoque entre Magazord e Mercado Livre.
 
-- Validar se a Magazord está enviando o campo correto para atualização de estoque igual a zero ou apenas alternado o status do anúncio para "paused".
-    Esse teste vai servir para confirmar se de fato é algum problema de envio da informação, já que o cliente afirma que a atualização manual funciona de forma correta.
+## Entendimento das formas de pausar anúncios via API (segundo a documentação do Mercado Livre):
+
+- A pausa de anúncios pode ocorrer de duas formas via API:
+
+    - Alterando a quantidade disponível para zero: PUT { "available_quantity": 0 }.
+
+    - Alterando o status do anúncio: PUT { "status": "paused" }.
+
+## Validação do comportamento do sistema:
+
+- Verificar se a plataforma Magazord está realmente enviando o campo available_quantity: 0 ao zerar o estoque, ou se está apenas alterando o campo status para "paused", o que pode causar comportamento inesperado no Mercado Livre.
+
+- Testar o envio manual com um item de teste para confirmar se o endpoint da API está sendo corretamente chamado com available_quantity: 0 quando o estoque acaba.
+
+## Análise de regras de negócio:
+
+- Verificar se existe alguma regra de negócio implementada que impede o envio de estoque zerado automaticamente, como medida preventiva contra pausas acidentais.
+
+## Avaliação dos logs e resposta da API:
+
+- Analisar os logs da integração para verificar:
+
+    - Se a requisição foi realmente enviada para o ML.
+
+    - Se houve erros como 400 (Bad Request) ou 401 (Unauthorized), que podem indicar falhas de autenticação ou payload inválido.
+
+    - Se o sistema está tratando e registrando essas falhas de forma adequada.
