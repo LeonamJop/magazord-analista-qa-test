@@ -1,6 +1,6 @@
 # Casos de testes para o Cenário 1:
 
-## Documentação e Materiais de Apoio
+## Documentação e Materiais de Apoio.
 
 ### Identificação da documentação:
 
@@ -10,7 +10,7 @@
 
 - Swagger da API desenvolvida internamente.
 
-- Documentação dos fluxos de negócio do e-commerce (estoque, pedidos, etc).
+- Documentação dos fluxos de negócio do e-commerce (estoque, pedidos, etc.).
 
 ### Análise da documentação:
 
@@ -34,7 +34,7 @@
 
 - Postman ou Hoppscotch para testes em APIs.
 
-## Abrangência dos Testes
+## Abrangência dos Testes.
 
 ### Funcionalidades a serem testadas:
 
@@ -74,7 +74,7 @@
 
 - Marketplace fora do ar ou com erro 500.
 
-### Cenários de carga e performance (parciais):
+### Cenários de carga e desempenho:
 
 - Enviar um lote grande de anúncios e validar tempo de processamento.
 
@@ -88,7 +88,7 @@
 
 - Baixa: cenários de exceção raros.
 
-## Execução dos Testes
+## Execução dos Testes.
 
 ### Ambiente de teste:
 
@@ -118,6 +118,6 @@
 
 ### Registro de resultados:
 
-- Jira ou notion com evidência e steps para bugs.
+- Jira ou Notion com evidência e steps para bugs.
 
 - Printscreen e gravações para bugs críticos.

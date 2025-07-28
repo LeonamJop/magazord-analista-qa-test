@@ -1,6 +1,6 @@
 # Casos de testes para o Cenário 2:
 
-## Documentação e Materiais de Apoio
+## Documentação e Materiais de Apoio.
 
 ### Identificação da documentação:
 
@@ -42,7 +42,7 @@
 
 - Status de pedidos: cancelamento, faturamento e envio devem ser refletidos corretamente.
 
-- Atualização de preço, se alterado no e-commerce deve ser sincronizado com Bling.
+- Atualização de preço, se alterado no e-commerce, deve ser sincronizado com Bling.
 
 - Geração de NF ou boletos.
 
@@ -50,7 +50,7 @@
 
 - Alta prioridade:
 
-    - Pedidos não sincronizando corretamente.
+    - Pedidos não sincronizandos corretamente.
 
     - Estoque divergente entre sistemas.
 
@@ -68,7 +68,7 @@
 
     - Layout de mensagens da API.
 
-## Execução dos Testes
+## Execução dos Testes.
 
 ### Dados de teste:
 
