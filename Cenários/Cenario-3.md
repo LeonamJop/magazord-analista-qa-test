@@ -1,6 +1,6 @@
 # Casos de testes para o Cenário 3:
 
-## Revisão da documentação e Comprenssão do fluxo:
+## Revisão da documentação e compreensão do fluxo:
 
 - Reunir com o time de desenvolvimento para revisar a documentação da integração, focando no processo de pausa de anúncios.
 
@@ -33,3 +33,17 @@
     - Se houve erros como 400 (Bad Request) ou 401 (Unauthorized), que podem indicar falhas de autenticação ou payload inválido.
 
     - Se o sistema está tratando e registrando essas falhas de forma adequada.
+
+## Possíveis Causas do problema:
+
+- Falha na regra de envio de estoque 0.
+    > ERP não envia "available_quantity: 0" automaticamente ao detectar estoque zerado.
+
+- API do ML não está recebendo a requisição corretamente.
+    > Pode estar ocorrendo erro 400/401 e o sistema não está tratando/logando adequadamente.
+
+- Travamento de algum job de sincronização.
+    > Algum processo agendado pode estar parando antes de enviar atualizações.
+
+- Configuração de anúncios.
+    > O cliente pode não ter configurado seus anúncios da melhor maneira.
